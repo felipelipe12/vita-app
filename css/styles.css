@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black-000: #3c3c3b;
+    --white-000: #ffffff;
+    
+    --gray-100: #f6f3f4;
+
+    --green-900: #0d542b;
+}
+
+body {
+    background-color: var(--white-color);
+    /* color: var(--black-color); */
+}
+
+section {
+    padding: 50px 0;
+}
+
+h1 {
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.column {
+    width: 100%;
+}
+
+/* Section - Hero */
+main section#section-hero div.container {
+    display: flex;
+    gap: 50px;
+}
+
+main section#section-hero div.container div.column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+/* Section - Cards */
+main section#section-cards div.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+main section#section-cards div.container div.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    background-color: var(--gray-100);
+    color: var(--green-900);
+    border-radius: 15px;
+    padding: 30px;
+    transition: .3s;
+}
+
+main section#section-cards div.container div.card:hover {
+    background-color: var(--green-900);
+    color: var(--white-000);
+}
+
+/* Section - Test */
+main section#section-test {
+    background-color: var(--green-900);
+    border-radius: 50px 50px 0 0;
+}
