@@ -16,6 +16,7 @@
 body {
     background-color: var(--white-color);
     /* color: var(--black-color); */
+    user-select: none;
 }
 
 section {
@@ -49,12 +50,18 @@ main section#section-hero div.container div.column {
 
 /* Section - Cards */
 main section#section-cards div.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main section#section-cards div.container div.cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-main section#section-cards div.container div.card {
+main section#section-cards div.container div.cards div.card {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -69,6 +76,7 @@ main section#section-cards div.container div.card {
 main section#section-cards div.container div.card:hover {
     background-color: var(--green-900);
     color: var(--white-000);
+    transform: scale(1.05);
 }
 
 /* Section - Test */
