@@ -15,16 +15,46 @@
 
 body {
     background-color: var(--white-color);
-    /* color: var(--black-color); */
+    font-family: "Roboto", sans-serif;
     user-select: none;
 }
 
 section {
-    padding: 50px 0;
+    padding: 80px 0;
+}
+
+button {
+    background-color: var(--green-900);
+    color: var(--white-000);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background-color: var(--white-000);
+    color: var(--green-900);
 }
 
 h1 {
+    font-size: 64px;
+}
 
+h2 {
+    color: var(--green-900);
+    font-size: 40px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+span {
+    font-size: 16px;
 }
 
 .container {
@@ -37,35 +67,49 @@ h1 {
 }
 
 /* Section - Hero */
-main section#section-hero div.container {
+section#section-hero {
+    height: 100dvh;
+}
+
+section#section-hero div.container div.columns {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 50px;
 }
 
-main section#section-hero div.container div.column {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-/* Section - Cards */
-main section#section-cards div.container {
-    display: flex;
+section#section-hero div.container div.columns div.column {
+    display: flex;    
     flex-direction: column;
     gap: 30px;
 }
 
-main section#section-cards div.container div.cards {
+section#section-hero div.container div.columns div.column:nth-child(1) {
+    align-items: end;
+}
+
+section#section-hero div.container div.columns div.column:nth-child(2) {
+    align-items: start;
+}
+
+/* Section - Cards */
+section#section-cards div.container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+section#section-cards div.container div.cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-main section#section-cards div.container div.cards div.card {
+section#section-cards div.container div.cards div.card {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     align-items: start;
+    gap: 10px;
     background-color: var(--gray-100);
     color: var(--green-900);
     border-radius: 15px;
@@ -73,14 +117,60 @@ main section#section-cards div.container div.cards div.card {
     transition: .3s;
 }
 
-main section#section-cards div.container div.card:hover {
+section#section-cards div.container div.cards div.card:hover {
     background-color: var(--green-900);
     color: var(--white-000);
     transform: scale(1.05);
 }
 
+/* Section - Tutorial */
+section#section-tutorial div.container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+section#section-tutorial div.container div.columns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+section#section-tutorial div.container div.columns div.column {
+    display: flex;
+    gap: 30px;
+}
+
+section#section-tutorial div.container div.columns div.column:nth-child(1) {
+    justify-content: end;
+}
+
+section#section-tutorial div.container div.columns div.column:nth-child(2) {
+    flex-direction: column;
+}
+
+/* Section - Download */
+section#section-download div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#section-download div.container div.img {
+    position: relative;
+    height: 200px;
+}
+
+section#section-download div.container div.img img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 /* Section - Test */
-main section#section-test {
+section#section-test {
     background-color: var(--green-900);
     border-radius: 50px 50px 0 0;
 }
